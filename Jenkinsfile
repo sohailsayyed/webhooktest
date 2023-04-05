@@ -12,7 +12,7 @@ pipeline {
                     env.BRANCH_NAME = commit.GIT_BRANCH.replace('origin/', '')
 		    echo "ohhhhhhhh..! " 
                     echo "${env.BRANCH_NAME}"
-		    echo "Nooooooooo..! ALL BRANCH" 
+		    echo "Nooooooooo..! ALL " 
                 }
             }
         }
@@ -49,7 +49,7 @@ pipeline {
              when {
                 anyOf{
                     expression { env.BRANCH_NAME == "main" }
-                    expression { env.BRANCH_NAME ==~ "release*" }
+                    expression { env.BRANCH_NAME ==~ "release/*" }
                 }
             }
 
