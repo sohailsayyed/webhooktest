@@ -60,7 +60,7 @@ pipeline {
                 //sh 'scp -rv *  ubuntu@13.233.236.84:/home/ubuntu/jenkins_test/'
                 //sh 'node app.js'
                 
-                echo "+++Upload Successful+++"
+                echo "+++Upload Successful+++fsdfdfsds"
             }
         }
   
