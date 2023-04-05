@@ -49,7 +49,7 @@ pipeline {
              when {
                 anyOf{
                     expression { env.BRANCH_NAME == "main" }
-                    expression { env.BRANCH_NAME ==~ "release/*" }
+                    expression { env.BRANCH_NAME ==~ "release/'" }
                 }
             }
 
