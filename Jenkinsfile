@@ -12,7 +12,7 @@ pipeline {
                     env.BRANCH_NAME = commit.GIT_BRANCH.replace('origin/', '')
 		    echo "ohhhhhhhh..! " 
                     echo "${env.BRANCH_NAME}"
-		    echo "Nooooooooo..! " 
+		    echo "Nooooooooo..! ALL BRANCH" 
                 }
             }
         }
