@@ -30,14 +30,14 @@ pipeline {
         
 
             steps {
-                
+                echo "WoooooooooW..! " 
+		echo "${env.BRANCH_NAME}"
                 echo "Test stage1 run successfully..! " 
                 //checkout scmGit(branches: [[name: '*/main'], [name: '*/develop'], [name: '*/release/*']], extensions: [], userRemoteConfigs: [[credentialsId: 'GitHub-rootuser', url: 'https://github.com/sohailsayyed/jenkins_test.git']])
 
                 echo "${env.BRANCH_NAME}"
 
-                //sh 'npm install'
-                //sh 'nohup node server.js &'
+                
             }
             
         }
