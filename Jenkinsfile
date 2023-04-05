@@ -24,8 +24,8 @@ pipeline {
                 anyOf{
                     expression { env.BRANCH_NAME == "develop" }
                     expression { env.BRANCH_NAME == "main" }
-                    expression { env.BRANCH_NAME ==~ "release/1.0" }
-                         
+                    expression { env.BRANCH_NAME ==~ "release/*" }
+                      
                 }
             }
     
