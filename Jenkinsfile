@@ -24,7 +24,7 @@ pipeline {
                 anyOf{
                     expression { env.BRANCH_NAME == "develop" }
                     expression { env.BRANCH_NAME == "main" }
-                    expression { env.BRANCH_NAME ==~ "origin/release/*" }
+                    expression { env.BRANCH_NAME ==~ "*release/*" }
                          
                 }
             }
@@ -49,7 +49,7 @@ pipeline {
              when {
                 anyOf{
                     expression { env.BRANCH_NAME == "main" }
-                    expression { env.BRANCH_NAME ==~ "origin/release/*" }
+                    expression { env.BRANCH_NAME ==~ "*release/*" }
                 }
             }
 
