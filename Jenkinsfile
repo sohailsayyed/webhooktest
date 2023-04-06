@@ -68,4 +68,11 @@ pipeline {
         }
   
     }
+	
+	post {
+		always {
+			slackSend channel: 'jenkinsnotification', message: 'Pipeline ${env.BUILD_ID} ${currentBuild.currentResult} for ${env.GIT_COMMIT} and branch ${env.GIT_Branch}'
+		}
+	}
+	
 }
