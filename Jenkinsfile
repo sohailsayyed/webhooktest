@@ -13,6 +13,7 @@ pipeline {
 		    echo "ohhhhhhhh..! " 
                     echo "${env.BRANCH_NAME}"
 		    echo "Nooooooooo..! ALL " 
+		    echo sh(returnStdout: true, script: 'env')
                 }
             }
         }
