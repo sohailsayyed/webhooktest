@@ -13,7 +13,7 @@ pipeline {
 		    echo "ohhhhhhhh..! " 
                     echo "${env.BRANCH_NAME}"
 		    echo "Nooooooooo..! ALL " 
-		    echo sh(returnStdout: true, script: 'env')
+		    //echo sh(returnStdout: true, script: 'env')
                 }
             }
         }
@@ -72,7 +72,7 @@ pipeline {
 	
 	post {
 		always {
-			slackSend channel: 'jenkinsnotification', message: "Pipeline ${env.BUILD_ID} ${currentBuild.currentResult} for ${env.GIT_COMMIT} and branch ${env.GIT_Branch}"
+			slackSend channel: 'jenkinsnotification', message: "Build-ID=${env.BUILD_ID} IS ${currentBuild.currentResult} for ${env.GIT_COMMIT} AND FOR BRANCH IS ${env.GIT_Branch}"
 		}
 	}
 	
